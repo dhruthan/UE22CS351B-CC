@@ -6,10 +6,10 @@ The Raft3D project implements a distributed 3D printing management system with a
 
 ## Implementation
 
-- **Architecture :** Mock Raft nodes interact over Docker network; each node exposes REST APIs and participates in leader election.
-- **Leader Election :** Uses randomized timers and heartbeats to simulate Raft leadership behavior.
-- **Snapshot Persistence :** Each node stores its data in `/raft/data`, preserved across restarts.
-- **Metrics :** Exposed via `/metrics` endpoint for each node, including `raft3d_is_leader` flag.
+- **Architecture:** Mock Raft nodes interact over Docker network; each node exposes REST APIs and participates in leader election.
+- **Leader Election:** Uses randomized timers and heartbeats to simulate Raft leadership behavior.
+- **Snapshot Persistence:** Each node stores its data in `/raft/data`, preserved across restarts.
+- **Metrics:** Exposed via `/metrics` endpoint for each node, including `raft3d_is_leader` flag.
 
 ## Limitations
 
@@ -102,4 +102,8 @@ curl http://localhost:8082/metrics | grep raft3d_is_leader
 **8. Snapshot Inspection:**
 ```
 sudo docker exec raft3d_raft3d-node2_1 ls /raft/data
+```
+
+```
+We Love CC ❤️
 ```
